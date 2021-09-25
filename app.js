@@ -7,12 +7,15 @@ var express = require('express');   // We are using the express library for the 
 var app     = express();            // We need to instantiate an express object to interact with the server in our code
 PORT        = 9222;                 // Set a port number at the top so it's easy to change in the future
 
+// Database
+var db = require('./database/db-connector')
+
 /*
     ROUTES
 */
 app.get('/', function(req, res)                 // This is the basic syntax for what is called a 'route'
     {
-        res.send("The server is running! See this? This is Cas's port")      // This function literally sends the string "The server is running!" to the computer
+        res.send("The server is running! See this? This is Cas's port! :)")      // This function literally sends the string "The server is running!" to the computer
     });                                         // requesting the web site.
 
 /*
